@@ -7,8 +7,8 @@ export const faqdata = [
     },
     {
         id:2,
-        q:"Question?",
-        ans:"Answer"
+        q:"Who are eligible to participate?",
+        ans:"Anyone with interest in Quantum Computing, must be a college student"
     },
 
 
