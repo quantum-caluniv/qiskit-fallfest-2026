@@ -1,0 +1,668 @@
+@import "tailwindcss";
+
+/* =========================================================
+   QISKIT FALL FEST 2026
+   LIGHT + ULTRA-DEEP DARK THEME
+========================================================= */
+
+:root {
+  --background: #eeeafa;
+  --foreground: #160d22;
+  --muted: #5c5268;
+
+  --purple: #4b147c;
+  --purple-light: #7424b8;
+
+  --pink: #c52b78;
+  --pink-light: #ed4d9d;
+
+  --blue: #294aa0;
+
+  --card: #e4dff0;
+  --card-strong: #d8d0e8;
+
+  --border: rgba(75, 20, 124, 0.18);
+  --shadow: rgba(30, 10, 50, 0.18);
+}
+
+
+/* =========================================================
+   DARK THEME
+========================================================= */
+
+:root[data-theme="dark"] {
+  --background: #020106;
+  --foreground: #f4eefe;
+  --muted: #9589a5;
+
+  --purple: #541080;
+  --purple-light: #8224b7;
+
+  --pink: #9e145c;
+  --pink-light: #d82b82;
+
+  --blue: #182d78;
+
+  --card: #090510;
+  --card-strong: #0e0718;
+
+  --border: rgba(125, 53, 170, 0.22);
+  --shadow: rgba(0, 0, 0, 0.8);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: var(--background);
+  color: var(--foreground);
+
+  overflow-x: hidden;
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+
+/* =========================================================
+   DARK AMBIENT BACKGROUND
+========================================================= */
+
+:root[data-theme="dark"] body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(75, 10, 110, 0.14),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 90% 35%,
+      rgba(25, 20, 100, 0.10),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(120, 10, 70, 0.08),
+      transparent 30%
+    );
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  background: var(--pink);
+  color: white;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-link {
+  position: relative;
+
+  color: var(--foreground);
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: var(--pink-light);
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--pink-light);
+
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   THEME TOGGLE
+========================================================= */
+
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  border: 1px solid var(--border);
+
+  background: var(--card);
+  color: var(--foreground);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 19px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08) rotate(10deg);
+
+  background: var(--purple);
+
+  border-color: var(--purple-light);
+
+  color: white;
+}
+
+
+/* =========================================================
+   GRADIENT TEXT
+========================================================= */
+
+.gradient-text {
+  background:
+    linear-gradient(
+      90deg,
+      var(--purple-light),
+      var(--pink),
+      var(--pink-light)
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+/* =========================================================
+   PILLS
+========================================================= */
+
+.pill {
+  display: inline-block;
+
+  padding: 8px 15px;
+
+  border-radius: 999px;
+
+  border: 1px solid var(--border);
+
+  background: var(--card);
+  color: var(--foreground);
+
+  font-size: 0.75rem;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.pill:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--pink-light);
+
+  background: var(--card-strong);
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+========================================================= */
+
+.register-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 20px;
+
+  border-radius: 999px;
+
+  background: var(--purple);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  box-shadow:
+    0 8px 25px var(--shadow);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.register-button:hover {
+  transform: translateY(-3px);
+
+  background: var(--purple-light);
+
+  box-shadow:
+    0 12px 35px var(--shadow);
+}
+
+
+/* =========================================================
+   FLOATING IMAGE
+========================================================= */
+
+.animate-float {
+  animation:
+    floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(2deg);
+  }
+
+  50% {
+    transform:
+      translateY(-18px)
+      rotate(-2deg);
+  }
+}
+
+
+/* =========================================================
+   UNIVERSITY OF CALCUTTA
+========================================================= */
+
+.cu-section {
+  position: relative;
+
+  margin: 100px 0;
+
+  padding: 60px;
+
+  border-radius: 32px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+
+  background: var(--card);
+
+  box-shadow:
+    0 30px 90px var(--shadow);
+
+  backdrop-filter: blur(20px);
+
+  transition:
+    background 0.5s ease,
+    border-color 0.5s ease;
+}
+
+
+/* DARK UNIVERSITY SECTION */
+
+:root[data-theme="dark"] .cu-section {
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(83, 12, 120, 0.20),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(70, 10, 90, 0.14),
+      transparent 30%
+    ),
+
+    #08040d;
+
+  border:
+    1px solid rgba(115, 35, 155, 0.20);
+
+  box-shadow:
+    0 35px 120px rgba(0, 0, 0, 0.8);
+}
+
+
+/* CU LABEL */
+
+.cu-label {
+  font-size: 11px;
+
+  letter-spacing: 0.35em;
+
+  font-weight: 600;
+
+  color: var(--pink-light);
+}
+
+
+/* CU TITLE */
+
+.cu-title {
+  margin-top: 22px;
+
+  font-size:
+    clamp(
+      42px,
+      8vw,
+      110px
+    );
+
+  line-height: 0.84;
+
+  letter-spacing: -0.07em;
+
+  font-weight: 400;
+}
+
+
+/* CU CONTENT */
+
+.cu-content {
+  margin-top: 70px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: end;
+}
+
+
+/* CU SMALL LABEL */
+
+.small-label {
+  font-size: 18px;
+
+  letter-spacing: 0.25em;
+
+  color: var(--purple-light);
+
+  font-weight: 600;
+}
+
+
+/* CU HEADING */
+
+.cu-description h2 {
+  margin-top: 18px;
+
+  font-size:
+    clamp(
+      36px,
+      4.5vw,
+      60px
+    );
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+
+  color: var(--foreground);
+}
+
+
+/* CU TEXT */
+
+.cu-text {
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.cu-text p {
+  max-width: 600px;
+}
+
+
+/* CU PARTNER PILLS */
+
+.institution-pills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 28px;
+}
+
+.institution-pills span {
+  padding: 10px 17px;
+
+  border-radius: 999px;
+
+  border: 1px solid var(--border);
+
+  background: var(--card);
+
+  color: var(--foreground);
+
+  font-size: 12px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.institution-pills span:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--pink-light);
+
+  background: var(--card-strong);
+}
+
+
+/* =========================================================
+   EVENT CARDS
+========================================================= */
+
+.event-card {
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  color: var(--foreground);
+
+  backdrop-filter: blur(15px);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--purple-light);
+}
+
+
+/* =========================================================
+   SCHEDULE
+========================================================= */
+
+.schedule-section {
+  background: var(--card-strong);
+
+  color: var(--foreground);
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+details {
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  color: var(--foreground);
+
+  backdrop-filter: blur(15px);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+details:hover {
+  border-color: var(--purple-light);
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+#contact .event-card {
+  max-width: 340px;
+}
+
+#contact h3 {
+  color: var(--foreground);
+}
+
+#contact a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .cu-section {
+    margin: 65px 0;
+
+    padding: 38px 24px;
+
+    border-radius: 24px;
+  }
+
+  .cu-content {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    margin-top: 55px;
+  }
+
+  .cu-title {
+    font-size:
+      clamp(
+        48px,
+        15vw,
+        82px
+      );
+  }
+
+  .cu-description h2 {
+    font-size: 40px;
+  }
+
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+
+    font-size: 17px;
+  }
+
+  #contact .event-card {
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}
