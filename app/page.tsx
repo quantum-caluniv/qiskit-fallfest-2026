@@ -176,7 +176,7 @@ export default function Home() {
             <img src="/qiskit-fallfest-2026/stickers/sticker10.png" alt="" className="hero-kicker-backdrop" />
 
             <div className="hero-kicker-row">
-              <img src="/qiskit-fallfest-2026/cuimage.jpeg" alt="University of Calcutta" className="h-10 w-10" />
+              <img src="/qiskit-fallfest-2026/culogo.jpg" alt="University of Calcutta" className="h-10 w-10" />
               <span className="hero-kicker-text">University of Calcutta × IBM Quantum</span>
               <img src="/qiskit-fallfest-2026/stickers/sticker7.jpg" alt="IBM" className="h-9 w-9" />
             </div>
@@ -233,11 +233,11 @@ export default function Home() {
 
               <div className="hero-card-row">
                 <span className="hero-card-caption">Venue</span>
-                <strong>Rajabazar Science College, University of Calcutta</strong>
+                <strong>Rajabazar Science College,University of Calcutta</strong>
               </div>
 
               <a href="https://maps.app.goo.gl/jSnPgWX4DzzechHq8" target="_blank" rel="noopener noreferrer" className="map-button">
-                ⌖ &nbsp; View venue on Google Maps →
+                ⌖ &nbsp; View on Google Maps →
               </a>
             </div>
           </div>
@@ -413,7 +413,7 @@ export default function Home() {
 
           <div className="partners-lead mt-12">
             <div className="partner-lead-card partner-lead-card-cu">
-              <img src="/qiskit-fallfest-2026/cuimage.jpeg" alt="University of Calcutta" />
+              <img src="/qiskit-fallfest-2026/culogo.jpg" alt="University of Calcutta" />
               <div>
                 <p className="partner-lead-label">Host institution</p>
                 <p className="partner-lead-name">University of Calcutta</p>
