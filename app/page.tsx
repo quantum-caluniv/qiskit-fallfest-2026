@@ -7,8 +7,7 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeDay, setActiveDay] = useState<1 | 2>(1);
-  const [quantumLogoRotation, setQuantumLogoRotation] = useState(0);
+  const [activeDay, setActiveDay] = useState<1 | 2 | 3>(1);
 
   useEffect(() => {
     setMounted(true);
@@ -81,39 +80,54 @@ export default function Home() {
   ========================================================= */
 
   const daySchedules: {
-    header: { label: string; date: string };
+    header: { label: string; date: string; theme: string };
     rows: { time: string; title: string; speaker?: string; highlight?: boolean }[];
   }[] = [
     {
-      header: { label: "Day 1", date: "8 October" },
+      header: {
+        label: "Day 1",
+        date: "7 October",
+        theme: "Quantum Foundations to Qiskit",
+      },
       rows: [
-        { time: "10:00–10:20", title: "Inauguration & Welcome", speaker: "University of Calcutta & Organising Team" },
-        { time: "10:20–10:40", title: "Why Quantum? Why Now?" },
-        { time: "10:40–11:00", title: "Qiskit Fall Fest 2026 Orientation" },
-        { time: "11:00–12:15", title: "Distinguished Quantum Lecture: Quantum Computing, Quantum Information and the Architecture of Tomorrow", speaker: "Prof. (Dr.) Susmita Sur-Kolay" },
-        { time: "12:15–12:30", title: "Interactive Q&A" },
-        { time: "12:30–1:30", title: "Lunch & Quantum Networking" },
-        { time: "1:30–2:00", title: "Qiskit 101 — From Qubit to Circuit" },
-        { time: "2:00–3:15", title: "Hands-on Qiskit Lab" },
-        { time: "3:15–3:30", title: "Refreshment Break" },
-        { time: "3:30–4:10", title: "Qiskit Quantum Challenge", highlight: true },
-        { time: "4:10–4:30", title: "Day I Reflection & Quantum Community Connect" },
+        { time: "17:00", title: "Welcome & Orientation" },
+        { time: "17:30", title: "Distinguished Quantum Lecture", speaker: "Prof. (Dr.) Susmita Sur-Kolay" },
+        { time: "18:30", title: "Live Q&A" },
+        { time: "19:00", title: "Qiskit 101 — From Qubit to Circuit" },
+        { time: "19:30", title: "Hands-on Qiskit Lab", highlight: true },
+        { time: "20:30", title: "Live Q&A" },
+        { time: "20:45", title: "Day 1 Reflection" },
       ],
     },
     {
-      header: { label: "Day 2", date: "9 October" },
+      header: {
+        label: "Day 2",
+        date: "8 October",
+        theme: "Beyond the Basics",
+      },
       rows: [
-        { time: "10:00–10:15", title: "Quantum Recap & Day II Kick-Off" },
-        { time: "10:15–11:30", title: "Distinguished Quantum Lecture: Quantum Algorithms, Quantum EDA and the Journey Towards Real Quantum Systems", speaker: "Prof. (Dr.) Amlan Chakrabarti" },
-        { time: "11:30–11:50", title: "Expert Q&A — Ask the Quantum Expert" },
-        { time: "11:50–12:15", title: "Quantum Research Spotlight" },
-        { time: "12:15–1:15", title: "Lunch & Research Networking" },
-        { time: "1:15–1:45", title: "Qiskit 201 — Beyond the Basics" },
-        { time: "1:45–3:00", title: "Hands-on Quantum Computing Session" },
-        { time: "3:00–3:15", title: "Refreshment Break" },
-        { time: "3:15–4:00", title: "Quantum Innovation Challenge", highlight: true },
-        { time: "4:00–4:20", title: "Student Showcase & Recognition" },
-        { time: "4:20–4:30", title: "Closing Ceremony" },
+        { time: "17:00", title: "Recap & Day 2 Kick-off" },
+        { time: "17:30", title: "Distinguished Quantum Lecture", speaker: "Prof. (Dr.) Amlan Chakrabarti" },
+        { time: "18:30", title: "Live Q&A" },
+        { time: "19:00", title: "Qiskit 201 — Beyond the Basics" },
+        { time: "19:30", title: "Hands-on Quantum Computing Session", highlight: true },
+        { time: "20:30", title: "Live Q&A" },
+        { time: "20:45", title: "Day 2 Reflection" },
+      ],
+    },
+    {
+      header: {
+        label: "Day 3",
+        date: "9 October",
+        theme: "Quantum Research to Real-World Frontiers",
+      },
+      rows: [
+        { time: "17:00", title: "Recap & Day 3 Kick-off" },
+        { time: "17:30", title: "Expert from IBM Quantum Research", speaker: "IBM Quantum Research" },
+        { time: "18:30", title: "Live Q&A" },
+        { time: "19:00", title: "Quantum Research Spotlight" },
+        { time: "19:45", title: "Quiz", highlight: true },
+        { time: "20:30", title: "Closing Ceremony" },
       ],
     },
   ];
@@ -228,17 +242,15 @@ export default function Home() {
 
               <div className="hero-card-row">
                 <span className="hero-card-caption">Date</span>
-                <strong>8 &amp; 9 October 2026</strong>
+                <strong>7, 8 &amp; 9 October 2026</strong>
               </div>
 
               <div className="hero-card-row">
                 <span className="hero-card-caption">Venue</span>
-                <strong>Rajabazar Science College,University of Calcutta</strong>
+                <strong>Online Mode</strong>
               </div>
 
-              <a href="https://maps.app.goo.gl/jSnPgWX4DzzechHq8" target="_blank" rel="noopener noreferrer" className="map-button">
-                ⌖ &nbsp; View on Google Maps →
-              </a>
+              
             </div>
           </div>
 
@@ -275,14 +287,14 @@ export default function Home() {
               <div className="identity-text">
                 <p>
                   Qiskit Fall Fest 2026 brings the world of quantum computing
-                  to the University of Calcutta, connecting students,
+                  to the University of Calcutta community, connecting students,
                   researchers and technology enthusiasts through learning,
                   experimentation and collaboration.
                 </p>
 
                 <div className="institution-pills">
                   <span>University of Calcutta</span>
-                  <span>IBM</span>
+                  <span>IBM Quantum</span>
                   <span>Qiskit</span>
                 </div>
               </div>
@@ -458,41 +470,61 @@ export default function Home() {
           <div className="snapshot-row mt-12">
             <div className="snapshot-chip">
               <p className="snapshot-chip-label">Date</p>
-              <p className="snapshot-chip-value">8 – 9 Oct 2026</p>
+              <p className="snapshot-chip-value">7 – 9 Oct 2026</p>
             </div>
             <div className="snapshot-chip">
               <p className="snapshot-chip-label">Timing</p>
-              <p className="snapshot-chip-value">10:00 AM – 4:30 PM</p>
+              <p className="snapshot-chip-value">5:00 PM – 9:00 PM</p>
             </div>
             <div className="snapshot-chip">
               <p className="snapshot-chip-label">Venue</p>
-              <p className="snapshot-chip-value">Rajabazar Science College</p>
+              <p className="snapshot-chip-value">Online Mode</p>
             </div>
           </div>
 
-          <div className="day-tabs">
-            <button type="button" className={`day-tab ${activeDay === 1 ? "active" : ""}`} onClick={() => setActiveDay(1)}>
-              <span className="day-tab-label">Day 1</span>
-              <span className="day-tab-date">8 October</span>
-            </button>
-            <button type="button" className={`day-tab ${activeDay === 2 ? "active" : ""}`} onClick={() => setActiveDay(2)}>
-              <span className="day-tab-label">Day 2</span>
-              <span className="day-tab-date">9 October</span>
-            </button>
+          <div className="day-tabs" role="tablist" aria-label="Event schedule days">
+            {daySchedules.map((day, index) => (
+              <button
+                key={day.header.label}
+                type="button"
+                role="tab"
+                aria-selected={activeDay === index + 1}
+                className={`day-tab ${activeDay === index + 1 ? "active" : ""}`}
+                onClick={() => setActiveDay((index + 1) as 1 | 2 | 3)}
+              >
+                <span className="day-tab-label">{day.header.label}</span>
+                <span className="day-tab-date">{day.header.date}</span>
+              </button>
+            ))}
           </div>
 
           {daySchedules.map((day, dayIndex) => (
             <div
               key={day.header.label}
-              className={`day-card ${dayIndex === 0 ? "day-card-one" : "day-card-two"} ${activeDay === dayIndex + 1 ? "visible" : ""}`}
+              className={`day-card day-card-${dayIndex + 1} ${activeDay === dayIndex + 1 ? "visible" : ""}`}
+              role="tabpanel"
             >
+              <div className="schedule-day-intro">
+                <div>
+                  <p className="schedule-day-label">{day.header.label} · {day.header.date} 2026</p>
+                  <h3>{day.header.theme}</h3>
+                </div>
+                <span>5:00 PM — 9:00 PM · Online</span>
+              </div>
+
               <div className="schedule-header">
                 <span>Time</span>
                 <span>Agenda</span>
                 <span>Speaker / Presenter</span>
               </div>
               {day.rows.map((row) => (
-                <ScheduleRow key={row.time + row.title} time={row.time} title={row.title} speaker={row.speaker} highlight={row.highlight} />
+                <ScheduleRow
+                  key={row.time + row.title}
+                  time={row.time}
+                  title={row.title}
+                  speaker={row.speaker}
+                  highlight={row.highlight}
+                />
               ))}
             </div>
           ))}
@@ -596,7 +628,7 @@ export default function Home() {
           <div>
             <p className="footer-kicker">QUANTUM COMPUTING × COMMUNITY</p>
             <p className="footer-title">Qiskit Fall Fest <span>2026</span></p>
-            <p className="footer-subtitle">University of Calcutta × IBM Qiskit</p>
+            <p className="footer-subtitle">University of Calcutta × IBM Quantum</p>
           </div>
 
           <div className="footer-links">
@@ -608,9 +640,8 @@ export default function Home() {
           </div>
 
           <div className="footer-event">
-            <strong>8 &amp; 9 October 2026</strong>
-            <span>University of Calcutta</span>
-            <a href="https://www.google.com/maps/search/?api=1&query=University+of+Calcutta" target="_blank" rel="noopener noreferrer">Get directions →</a>
+            <strong>7, 8 &amp; 9 October 2026</strong>
+            <span>Online Mode</span>
           </div>
         </div>
 

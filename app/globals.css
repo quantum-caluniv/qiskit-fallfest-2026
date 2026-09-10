@@ -1005,7 +1005,7 @@ body::after {
 
 :root[data-theme="dark"] .schedule-backdrop { opacity: 0.1; }
 
-.day-tabs { display: inline-flex; gap: 6px; padding: 6px; margin-top: 6px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); }
+.day-tabs { display: inline-flex; gap: 6px; padding: 6px; margin-top: 6px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); max-width: 100%; }
 
 .day-tab {
   display: flex;
@@ -1027,6 +1027,47 @@ body::after {
 .day-tab.active {
   background: linear-gradient(120deg, var(--ion), var(--photon));
   color: white;
+}
+
+.schedule-day-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0 0 22px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 90% 15%, color-mix(in srgb, var(--qubit) 12%, transparent), transparent 42%),
+    radial-gradient(circle at 10% 90%, color-mix(in srgb, var(--photon) 10%, transparent), transparent 46%),
+    var(--card);
+}
+
+.schedule-day-label {
+  margin: 0 0 7px;
+  color: var(--photon-light);
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.schedule-day-intro h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.6vw, 30px);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+}
+
+.schedule-day-intro > span {
+  flex: none;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
 
 .day-card { display: none; margin-top: 28px; }
@@ -1094,11 +1135,19 @@ body::after {
 }
 
 @media (max-width: 640px) {
-  .day-tabs { display: flex; width: 100%; }
-  .day-tab { flex: 1; align-items: center; }
+  .day-tabs { display: flex; width: 100%; overflow-x: auto; }
+  .day-tab { min-width: 0; }
+  .day-tab { flex: 1; align-items: center; min-width: 0; }
 }
 
 @media (max-width: 760px) {
+  .schedule-day-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+  }
+
   .schedule-header { display: none; }
 
   .schedule-row,
