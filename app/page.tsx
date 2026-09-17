@@ -555,7 +555,7 @@ export default function Home() {
           </p>
 
           <button disabled className="mt-9 cursor-not-allowed rounded-full bg-[var(--ion)] px-8 py-4 text-sm font-semibold text-white opacity-80">
-            Registration Opening Soon
+            Registration Opens on <b>23rd September 2026</b>
           </button>
         </div>
       </section>
