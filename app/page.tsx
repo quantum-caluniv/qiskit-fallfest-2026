@@ -48,14 +48,14 @@ export default function Home() {
   ========================================================= */
  
   const contacts = [
-    { name: "Subhajit Pal", email: "subhajitp00@gmail.com", linkedin: "https://www.linkedin.com/", github: "https://github.com/", image: "/qiskit-fallfest-2026/organisers/.jpeg" },
-    { name: "Pritam Mitra",  email: "pritammitra2k12@gmail.com", linkedin: "https://www.linkedin.com/", github: "https://github.com/", image: "/qiskit-fallfest-2026/organisers/.jpeg" },
-    { name: "Tarab Momin",  email: "tarabmomin51@gmail.com", linkedin: "https://www.linkedin.com/", github: "https://github.com/", image: "/qiskit-fallfest-2026/organisers/.jpeg" },
-    { name: "Arkadeep Pramanik",  email: "sunarkadeep@gmail.com", linkedin: "https://www.linkedin.com/", github: "https://github.com/", image: "/qiskit-fallfest-2026/organisers/arkadeep.jpeg" },
-    { name: "Soham Sarkar", number: "+91 90000 10005", email: "sohamsarkar.off@gmail.com", linkedin: "https://www.linkedin.com/", github: "https://github.com/", image: "/qiskit-fallfest-2026/organisers/soham.jpeg" },
-    { name: "Suchetana Das", email: "suchetana.das1140@gmail.com", linkedin: "https://www.linkedin.com/", github: "https://github.com/", image: "/qiskit-fallfest-2026/organisers/suchetana.jpeg" },
-    { name: "Saptak Mukhopadhyay", phone: "+919000010007", email: "mukhopadhyaysaptak@gmail.com", linkedin: "https://www.linkedin.com/", github: "https://github.com/", image: "/qiskit-fallfest-2026/organisers/saptak.jpeg" },
-    { name: "Anish Mandal", number: "+91 90000 10008", email: "anish07072007@gmail.com", linkedin: "https://www.linkedin.com/", github: "https://github.com/", image: "/qiskit-fallfest-2026/organisers/anish.jpeg" },
+    { name: "Subhajit Pal", desgn:"UGC JRF, AKCSIT", email: "subhajitp00@gmail.com", linkedin: "https://www.linkedin.com/in/subhajit-pal-155a6415a", image: "/qiskit-fallfest-2026/organisers/.jpeg" },
+    { name: "Pritam Mitra",  desgn:"Research Intern, AKCSIT", email: "pritammitra2k12@gmail.com", linkedin: "https://www.linkedin.com/in/pritam-mitra-a9b49a319", image: "/qiskit-fallfest-2026/organisers/.jpeg" },
+    { name: "Tarab Momin",  desgn:"UGC JRF, AKCSIT", email: "tarabmomin51@gmail.com", linkedin: "https://www.linkedin.com/in/tarabqa", image: "/qiskit-fallfest-2026/organisers/.jpeg" },
+    { name: "Arkadeep Pramanik",  desgn:"B.Tech 2nd year, IE", email: "sunarkadeep@gmail.com", linkedin: "https://www.linkedin.com/in/sunarkadeep", github: "https://github.com/sunarkadeep", image: "/qiskit-fallfest-2026/organisers/arkadeep.jpeg" },
+    { name: "Soham Sarkar", desgn:"B.Tech 2nd year, IE", phone: "+91 90000 10005", email: "sohamsarkar.off@gmail.com", linkedin: "https://www.linkedin.com/in/soham-sarkar-sjh858", image: "/qiskit-fallfest-2026/organisers/soham.jpeg" },
+    { name: "Suchetana Das", desgn:"B.Tech 2nd year, ECE", email: "suchetana.das1140@gmail.com", linkedin: "https://www.linkedin.com/in/suchetana-das-b01173372", github: "https://github.com/", image: "/qiskit-fallfest-2026/organisers/suchetana.jpeg" },
+    { name: "Saptak Mukhopadhyay", desgn:"B.Tech 2nd year, IE", phone: "+919000010007", email: "mukhopadhyaysaptak@gmail.com", linkedin: "https://www.linkedin.com/in/saptak-mukhopadhyay-5687a5269", image: "/qiskit-fallfest-2026/organisers/saptak.jpeg" },
+    { name: "Anish Mandal", desgn:"B.Tech 2nd year, IE", phone: "+91 90000 10008", email: "anish07072007@gmail.com", linkedin: "https://www.linkedin.com/in/anish-mandal-b3208b383", image: "/qiskit-fallfest-2026/organisers/anish.jpeg" },
   ];
  
   /* =========================================================
@@ -497,7 +497,7 @@ export default function Home() {
           </p>
  
           <button disabled className="mt-9 cursor-not-allowed rounded-full bg-[var(--ion)] px-8 py-4 text-sm font-semibold text-white opacity-80">
-            Registration opens on 23rd September
+            Registration opens on 25th September
           </button>
         </div>
       </section>
@@ -521,7 +521,7 @@ export default function Home() {
           <div className="mt-10 space-y-4 faq-list">
             <FAQ question="Do I need prior quantum computing experience?" answer="No. The event is designed to welcome beginners as well as participants with previous quantum computing experience." />
             <FAQ question="Do I need to know programming?" answer="Basic programming knowledge can be helpful, but beginner-friendly guidance will be provided." />
-            <FAQ question="What should I bring?" answer="Bring your laptop, charger and curiosity. Official requirements will be announced before the event." />
+            {/* <FAQ question="What should I bring?" answer="Bring your laptop, charger and curiosity. Official requirements will be announced before the event." /> */}
           </div>
         </div>
       </section>
@@ -552,9 +552,10 @@ export default function Home() {
                   <div className="contact-avatar contact-avatar-initials">{contact.name.slice(0, 1)}</div>
                 )}
                 <h3>{contact.name}</h3>
-                <p className="contact-role">Team Member</p>
-                {contact.phone && <div className="contact-detail-icon-row"><a href={`tel:${contact.phone}`} className="contact-icon-button" aria-label={`Call ${contact.name}`} title={`Call ${contact.name}`}><PhoneIcon /></a></div>}
+                <p className="contact-role"><strong>{contact.desgn}</strong></p>
+                
                 <div className="social-icons">
+                  {contact.phone && <div className="contact-detail-icon-row"><a href={`tel:${contact.phone}`} className="contact-icon-button" aria-label={`Call ${contact.name}`} title={`Call ${contact.name}`}><PhoneIcon /></a></div>}
                   {contact.email && <a href={`mailto:${contact.email}`} aria-label={`Email ${contact.name}`}><MailIcon /></a>}
                   {contact.linkedin && <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${contact.name} LinkedIn`}><LinkedInIcon /></a>}
                   {contact.github && <a href={contact.github} target="_blank" rel="noopener noreferrer" aria-label={`${contact.name} GitHub`}><GitHubIcon /></a>}

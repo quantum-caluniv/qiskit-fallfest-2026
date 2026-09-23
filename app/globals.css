@@ -2013,7 +2013,7 @@ a:focus-visible, button:focus-visible, details:focus-visible {
   display: flex;
   justify-content: center;
   min-height: 32px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .contact-icon-button {
   display: grid;
