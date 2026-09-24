@@ -4621,3 +4621,64 @@ img, svg, video, canvas {
     flex-basis: 34px !important;
   }
 }
+
+
+/* =========================================================
+   FINAL MOBILE NAV FIX — keep "Qiskit Fall Fest 2026" fully visible
+   without clipping the year, while preserving the compact 3-button layout.
+========================================================= */
+@media (max-width: 900px) {
+  .nav-capsule {
+    overflow: visible !important;
+  }
+
+  .nav-logo {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: nowrap !important;
+    font-size: 10.5px !important;
+    letter-spacing: -0.035em !important;
+    gap: 6px !important;
+    line-height: 1 !important;
+  }
+
+  .nav-logo::before {
+    width: 7px !important;
+    height: 7px !important;
+    flex: 0 0 7px !important;
+  }
+
+  .nav-logo span {
+    display: inline !important;
+    font-size: 0.95em !important;
+    margin-left: 0 !important;
+  }
+
+  .nav-right {
+    flex: 0 0 auto !important;
+    gap: 4px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-logo {
+    font-size: 9.5px !important;
+    letter-spacing: -0.04em !important;
+    gap: 5px !important;
+  }
+
+  .nav-logo::before {
+    width: 6px !important;
+    height: 6px !important;
+    flex-basis: 6px !important;
+  }
+}
+
+
+/* Registration link remains present in the source but cannot open until enabled. */
+[aria-disabled="true"].cursor-not-allowed {
+  pointer-events: auto;
+  user-select: none;
+}

@@ -130,6 +130,10 @@ export default function Home() {
   // Replace this with the final Google Drive folder/link for attendees.
   const attendeeResourcesUrl = "https://drive.google.com/";
 
+  // Registration link is already stored here, but remains disabled until you switch this to true.
+  const registrationUrl = "https://forms.gle/Vbzt1fZYLnEgC3KF8";
+  const registrationEnabled = false;
+
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--fg)] transition-colors duration-500">
  
@@ -521,9 +525,20 @@ export default function Home() {
             official registration details.
           </p>
  
-          <button disabled className="mt-9 cursor-not-allowed rounded-full bg-[var(--ion)] px-8 py-4 text-sm font-semibold text-white opacity-80">
-            Registration opens on 25th September
-          </button>
+          <a
+            href={registrationEnabled ? registrationUrl : undefined}
+            aria-disabled={!registrationEnabled}
+            onClick={(event) => {
+              if (!registrationEnabled) event.preventDefault();
+            }}
+            className={`mt-9 inline-flex items-center justify-center rounded-full bg-[var(--ion)] px-8 py-4 text-sm font-semibold text-white opacity-80 no-underline ${
+              registrationEnabled
+                ? "cursor-pointer"
+                : "cursor-not-allowed"
+            }`}
+          >
+            {registrationEnabled ? "Register Now →" : "Registration opens on 25th September"}
+          </a>
         </div>
       </section>
  
