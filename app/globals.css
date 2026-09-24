@@ -4480,3 +4480,144 @@ img, svg, video, canvas {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Final mobile header-bubble cleanup: keep all colour/glow inside the bubble */
+@media (max-width: 900px) {
+  .hero-kicker-wrap::before {
+    display: none !important;
+  }
+
+  .hero-kicker-row {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    background: var(--card) !important;
+    border: 1px solid color-mix(in srgb, var(--photon) 55%, var(--qubit) 45%) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 8px 24px var(--shadow) !important;
+  }
+
+  .hero-kicker-row::before,
+  .hero-kicker-row::after {
+    pointer-events: none !important;
+  }
+}
+
+/* =========================================================
+   FINAL MOBILE NAV POLISH
+   Compact spacing + contained colour/glow inside the capsule.
+========================================================= */
+@media (max-width: 900px) {
+  .nav-wrap {
+    top: 10px !important;
+    padding: 0 12px !important;
+  }
+
+  .nav-capsule {
+    min-height: 52px !important;
+    height: 52px !important;
+    padding: 5px 6px 5px 14px !important;
+    gap: 8px !important;
+    border-radius: 28px !important;
+    background: color-mix(in srgb, var(--bg) 90%, transparent) !important;
+    box-shadow: 0 8px 26px var(--shadow) !important;
+  }
+
+  /* Keep the animated colour strictly inside the rounded capsule. */
+  .nav-capsule::before,
+  .nav-capsule::after {
+    border-radius: 28px !important;
+    clip-path: inset(0 round 28px) !important;
+  }
+
+  .nav-capsule::before {
+    opacity: .52 !important;
+  }
+
+  .nav-capsule::after {
+    opacity: .34 !important;
+  }
+
+  .nav-logo {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    font-size: 11px !important;
+    letter-spacing: -.02em !important;
+    line-height: 1 !important;
+  }
+
+  .nav-logo span {
+    font-size: .9em !important;
+  }
+
+  .nav-right {
+    flex: 0 0 auto !important;
+    gap: 5px !important;
+    margin-left: 4px !important;
+  }
+
+  .mobile-menu-button,
+  .theme-toggle,
+  .nav-right .register-button {
+    width: 36px !important;
+    min-width: 36px !important;
+    height: 36px !important;
+    flex: 0 0 36px !important;
+  }
+
+  .mobile-menu-button {
+    border-radius: 50% !important;
+  }
+
+  .mobile-menu-button span {
+    width: 16px !important;
+    height: 2px !important;
+  }
+
+  .theme-toggle {
+    padding: 0 !important;
+    border-radius: 50% !important;
+    font-size: 15px !important;
+    line-height: 1 !important;
+  }
+
+  .nav-right .register-button {
+    border-radius: 50% !important;
+  }
+
+  .nav-right .register-button::after {
+    font-size: 19px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-wrap {
+    padding: 0 9px !important;
+  }
+
+  .nav-capsule {
+    padding-left: 12px !important;
+    padding-right: 5px !important;
+    gap: 5px !important;
+  }
+
+  .nav-logo {
+    font-size: 10px !important;
+  }
+
+  .nav-right {
+    gap: 4px !important;
+  }
+
+  .mobile-menu-button,
+  .theme-toggle,
+  .nav-right .register-button {
+    width: 34px !important;
+    min-width: 34px !important;
+    height: 34px !important;
+    flex-basis: 34px !important;
+  }
+}
