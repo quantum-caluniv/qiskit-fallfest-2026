@@ -48,9 +48,9 @@ export default function Home() {
   ========================================================= */
  
   const contacts = [
-    { name: "Subhajit Pal", desgn:"UGC JRF, AKCSIT", email: "subhajitp00@gmail.com", linkedin: "https://www.linkedin.com/in/subhajit-pal-155a6415a", image: "/qiskit-fallfest-2026/organisers/.jpeg" },
-    { name: "Pritam Mitra",  desgn:"Research Intern, AKCSIT", email: "pritammitra2k12@gmail.com", linkedin: "https://www.linkedin.com/in/pritam-mitra-a9b49a319", image: "/qiskit-fallfest-2026/organisers/.jpeg" },
-    { name: "Tarab Momin",  desgn:"UGC JRF, AKCSIT", email: "tarabmomin51@gmail.com", linkedin: "https://www.linkedin.com/in/tarabqa", image: "/qiskit-fallfest-2026/organisers/.jpeg" },
+    { name: "Subhajit Pal", desgn:"UGC JRF, AKCSIT", email: "subhajitp00@gmail.com", linkedin: "https://www.linkedin.com/in/subhajit-pal-155a6415a", image: "/qiskit-fallfest-2026/organisers/subhajit.jpeg" },
+    { name: "Pritam Mitra",  desgn:"Research Intern, AKCSIT", email: "pritammitra2k12@gmail.com", linkedin: "https://www.linkedin.com/in/pritam-mitra-a9b49a319", image: "/qiskit-fallfest-2026/organisers/pritam.jpeg" },
+    { name: "Tarab Momin",  desgn:"UGC JRF, AKCSIT", email: "tarabmomin51@gmail.com", linkedin: "https://www.linkedin.com/in/tarabqa", image: "/qiskit-fallfest-2026/organisers/tarab.jpeg" },
     { name: "Arkadeep Pramanik",  desgn:"B.Tech 2nd year, IE", email: "sunarkadeep@gmail.com", linkedin: "https://www.linkedin.com/in/sunarkadeep", github: "https://github.com/sunarkadeep", image: "/qiskit-fallfest-2026/organisers/arkadeep.jpeg" },
     { name: "Soham Sarkar", desgn:"B.Tech 2nd year, IE", phone: "+91 90000 10005", email: "sohamsarkar.off@gmail.com", linkedin: "https://www.linkedin.com/in/soham-sarkar-sjh858", image: "/qiskit-fallfest-2026/organisers/soham.jpeg" },
     { name: "Suchetana Das", desgn:"B.Tech 2nd year, ECE", email: "suchetana.das1140@gmail.com", linkedin: "https://www.linkedin.com/in/suchetana-das-b01173372", github: "https://github.com/", image: "/qiskit-fallfest-2026/organisers/suchetana.jpeg" },
@@ -125,7 +125,10 @@ export default function Home() {
       ],
     },
   ];
- 
+
+  // Replace this with the final Google Drive folder/link for attendees.
+  const attendeeResourcesUrl = "https://drive.google.com/";
+
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--fg)] transition-colors duration-500">
  
@@ -147,7 +150,14 @@ export default function Home() {
           </nav>
  
           <div className="nav-right">
-            <button type="button" onClick={() => setMobileMenuOpen((open) => !open)} className="mobile-menu-button" aria-label="Toggle navigation">
+            <button
+              type="button"
+              className="mobile-menu-button"
+              aria-label="Toggle navigation"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
+              onClick={() => setMobileMenuOpen((open) => !open)}
+            >
               <span /><span /><span />
             </button>
  
@@ -164,7 +174,7 @@ export default function Home() {
             <a href="#register" className="register-button"><span className="full">Register →</span></a>
           </div>
  
-          <div className={`mobile-nav ${mobileMenuOpen ? "open" : ""}`}>
+          <div id="mobile-navigation" className={`mobile-nav ${mobileMenuOpen ? "open" : ""}`}>
             {navItems.map(([label, href]) => (
               <a key={href} href={href} onClick={() => setMobileMenuOpen(false)}>{label}</a>
             ))}
@@ -472,6 +482,26 @@ export default function Home() {
           ))}
  
           <p className="mt-7 text-xs text-[var(--muted)]">* Timings are subject to minor adjustment on the day.</p>
+
+          {/* ATTENDEE RESOURCES */}
+          <div className="attendee-resources" aria-labelledby="attendee-resources-title">
+            <div className="attendee-resources-copy">
+              <p className="attendee-resources-kicker">For registered attendees</p>
+              <h3 id="attendee-resources-title">Attendee Resources</h3>
+              <p>
+                Access workshop materials, notes, links and other resources shared
+                during Qiskit Fall Fest 2026.
+              </p>
+            </div>
+            <a
+              href={attendeeResourcesUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="attendee-resources-button"
+            >
+              Open Google Drive <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
       </section>
  
