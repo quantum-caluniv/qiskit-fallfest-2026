@@ -65,6 +65,7 @@ export default function Home() {
   const speakers = [
     { name: "Prof. (Dr.) Susmita Sur-Kolay", designation: "Fulbright Nehru Academic Excellence Fellow at UC San Diego; Visiting Professor at Ashoka U.; International Excellence Fellow at Karlsruhe Institute of Tech. Germany; Professor (HAG) , Retd.   Indian Statistical Institute", organization: "Indian Statistical Institute", image: "/qiskit-fallfest-2026/speakers/susmita sur.jpg" },
     { name: "Prof. (Dr.) Amlan Chakrabarti", designation: "Professor and Director, A.K. Choudhury School of IT, University of Calcutta, Visiting Prof. Dept. of AI IIT Kharagpur & Adj. Prof. IIIT Delhi", organization: "University of Calcutta", image: "/qiskit-fallfest-2026/speakers/Amlansir.jpeg" },
+    { name: "Bhavna Bose Gupta", designation: "Quantum Computing Researcher · Qiskit Advocate · Quantum Trainer · Quantum Machine Learning · AI / ML · Cyber Security", organization: "IBM Quantum Expert", image: "/qiskit-fallfest-2026/speakers/bhavna.jpeg" },
   ];
  
  
