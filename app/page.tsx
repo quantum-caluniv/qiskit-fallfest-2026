@@ -132,7 +132,7 @@ export default function Home() {
 
   // Registration link is already stored here, but remains disabled until you switch this to true.
   const registrationUrl = "https://forms.gle/Vbzt1fZYLnEgC3KF8";
-  const registrationEnabled = false;
+  const registrationEnabled = true;
 
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--fg)] transition-colors duration-500">
@@ -408,7 +408,7 @@ export default function Home() {
         <img src="/qiskit-fallfest-2026/stickers/sticker4.png" alt="" className="schedule-float-sticker" aria-hidden="true" />
         <img src="/qiskit-fallfest-2026/stickers/sticker10.png" alt="" className="schedule-backdrop" />
         <div className="mx-auto max-w-7xl">
-          <p className="eyebrow">05 / Schedule</p>
+          <p className="eyebrow">04 / Schedule</p>
  
           <h2 className="mt-6 font-mono text-4xl tracking-[-0.05em] md:text-6xl">
             Event
@@ -512,7 +512,7 @@ export default function Home() {
         <div className="pointer-events-none absolute -top-40 -right-40 h-[450px] w-[450px] rounded-full bg-[var(--ion)] opacity-10 blur-3xl" />
  
         <div className="relative mx-auto max-w-5xl text-center">
-          <p className="eyebrow">06 / Registration</p>
+          <p className="eyebrow">05 / Registration</p>
  
           <h2 className="mt-7 font-mono text-4xl leading-none tracking-[-0.06em] md:text-7xl">
             Ready to enter
@@ -521,8 +521,7 @@ export default function Home() {
           </h2>
  
           <p className="mx-auto mt-7 max-w-2xl text-base leading-7 text-[var(--muted)] md:text-lg">
-            Registration will open soon. Keep an eye on this page for
-            official registration details.
+            Registrations started!
           </p>
  
           <a
@@ -537,7 +536,7 @@ export default function Home() {
                 : "cursor-not-allowed"
             }`}
           >
-            {registrationEnabled ? "Register Now →" : "Registration opens on 25th September"}
+            {registrationEnabled ? "Register Now →" : "Registration Open"}
           </a>
         </div>
       </section>
@@ -550,7 +549,7 @@ export default function Home() {
         <img src="/qiskit-fallfest-2026/stickers/sticker2.png" alt="" className="faq-float-sticker faq-sticker-one" aria-hidden="true" />
         <img src="/qiskit-fallfest-2026/stickers/sticker5.png" alt="" className="faq-float-sticker faq-sticker-two" aria-hidden="true" />
         <div className="mx-auto max-w-5xl">
-          <p className="eyebrow" style={{ color: "var(--ion-light)" }}>07 / FAQ</p>
+          <p className="eyebrow" style={{ color: "var(--ion-light)" }}>06 / FAQ</p>
           <div className="faq-heading-row">
             <div>
               <h2 className="mt-6 font-mono text-4xl tracking-[-0.05em] md:text-6xl">Questions?</h2>
@@ -572,7 +571,7 @@ export default function Home() {
  
       <section id="contact" className="px-6 py-14 md:px-10">
         <div className="mx-auto max-w-5xl">
-          <p className="eyebrow">08 / Contact</p>
+          <p className="eyebrow">07 / Contact</p>
  
           <h2 className="mt-6 font-mono text-4xl tracking-[-0.05em] md:text-6xl">
             Contact <span className="gradient-text">Us.</span>
