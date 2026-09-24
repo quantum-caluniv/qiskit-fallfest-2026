@@ -226,11 +226,7 @@ export default function Home() {
               <a href="#about" className="explore-link">Explore Event</a>
             </div>
  
-            <div className="hero-tag-row mt-10">
-              <span className="pill">Quantum Computing</span>
-              <span className="pill">Qiskit</span>
-              <span className="pill">Workshops</span>
-            </div>
+           
           </div>
  
           {/* HERO VISUAL */}
@@ -297,9 +293,7 @@ export default function Home() {
                 </p>
  
                 <div className="institution-pills">
-                  <span>University of Calcutta</span>
-                  <span>IBM Quantum</span>
-                  <span>Qiskit</span>
+                  
                 </div>
               </div>
             </div>
