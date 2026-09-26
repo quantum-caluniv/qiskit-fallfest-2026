@@ -1,5 +1,12 @@
 :HL["/qiskit-fallfest-2026/_next/static/chunks/233p45nuh4m5b.css","style"]
+<<<<<<< HEAD
 :HL["/qiskit-fallfest-2026/_next/static/chunks/3jnd6_bzzciyi.css","style"]
 :HL["/qiskit-fallfest-2026/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/qiskit-fallfest-2026/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"Ik6YLz5mW7cuH8WrcRgiY"}
+=======
+:HL["/qiskit-fallfest-2026/_next/static/chunks/0-vkvhzvp9hm7.css","style"]
+:HL["/qiskit-fallfest-2026/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/qiskit-fallfest-2026/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"K1yaiezqX_kL9oCc4qjOI"}
+>>>>>>> e290719e8db6de9095e6be25724f586e2cab55a7

@@ -118,7 +118,7 @@ export default function Home() {
       },
       rows: [
         { time: "17:00", title: "Recap & Day 3 Kick-off" },
-        { time: "17:30", title: "Expert from IBM Quantum Research", speaker: "IBM Quantum Research" },
+        { time: "17:30", title: "Quantum and Qiskit 101 Seminar", speaker: "IBM Quantum Speaker" },
         { time: "18:30", title: "Live Q&A" },
         { time: "19:00", title: "Quantum Research Spotlight" },
         { time: "19:45", title: "Quiz", highlight: false },
