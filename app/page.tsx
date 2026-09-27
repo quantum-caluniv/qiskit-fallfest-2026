@@ -132,7 +132,7 @@ export default function Home() {
 
   // Registration link is already stored here, but remains disabled until you switch this to true.
   const registrationUrl = "https://forms.gle/Vbzt1fZYLnEgC3KF8";
-  const registrationEnabled = false;
+  const registrationEnabled = true;
 
   return (
     <main className="min-h-screen bg-[var(--bg)] text-[var(--fg)] transition-colors duration-500">
@@ -521,7 +521,7 @@ export default function Home() {
           </h2>
  
           <p className="mx-auto mt-7 max-w-2xl text-base leading-7 text-[var(--muted)] md:text-lg">
-            Registrations are closed!
+            Registrations are opened again!
           </p>
  
           <a
@@ -536,7 +536,7 @@ export default function Home() {
                 : "cursor-not-allowed"
             }`}
           >
-            {registrationEnabled ? "Registration Closed" : "Registration Closed"}
+            {registrationEnabled ? "Registrations Opened" : "Registrations Opened"}
           </a>
         </div>
       </section>
