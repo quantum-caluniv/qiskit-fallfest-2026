@@ -65,7 +65,7 @@ export default function Home() {
   const speakers = [
     { name: "Prof. (Dr.) Susmita Sur-Kolay", designation: "Fulbright Nehru Academic Excellence Fellow at UC San Diego; Visiting Professor at Ashoka U. International Excellence Fellow at Karlsruhe Institute of Tech. Germany; Professor (HAG) , Retd.   Indian Statistical Institute", organization: "Indian Statistical Institute", image: "/qiskit-fallfest-2026/speakers/susmita sur.jpg" },
     { name: "Prof. (Dr.) Amlan Chakrabarti", designation: "Professor and Director, A.K. Choudhury School of IT, University of Calcutta, Visiting Prof. Dept. of AI IIT Kharagpur & Adj. Prof. IIIT Delhi", organization: "University of Calcutta", image: "/qiskit-fallfest-2026/speakers/Amlansir.jpeg" },
-    { name: "IBM Quantum Expert", designation: ".", organization: "IBM Quantum Expert", image: "/qiskit-fallfest-2026/speakers/bhavna1.jpeg" },
+    { name: "Bhavna Bose Gupta", designation: "Prof. Bhavna Bose is an Assistant Professor at NMIMS MPSTME, Mumbai, pursuing Ph.D. in Quantum Machine Learning. She is a Tier 2 Qiskit Advocate, IBM Certified Qiskit Developer, and Qniverse-certified quantum practitioner.", organization: "IBM Quantum Expert & MPSTME, NMIMS University,Mumbai", image: "/qiskit-fallfest-2026/speakers/bhavna.jpeg" },
   ];
  
  
@@ -86,7 +86,7 @@ export default function Home() {
       },
       rows: [
         { time: "17:00", title: "Welcome & Orientation" },
-        { time: "17:30", title: "Distinguished Quantum Lecture", speaker: "Prof. (Dr.) Susmita Sur-Kolay" },
+        { time: "17:30", title: "Distinguished Quantum Lecture", speaker: "Prof. (Dr.)  Susmita Sur-Kolay" },
         { time: "18:30", title: "Live Q&A" },
         { time: "19:00", title: "Qiskit 101 — From Qubit to Circuit" },
         { time: "19:30", title: "Hands-on Qiskit Lab", highlight: false },
@@ -118,7 +118,7 @@ export default function Home() {
       },
       rows: [
         { time: "17:00", title: "Recap & Day 3 Kick-off" },
-        { time: "17:30", title: "Quantum and Qiskit 101 Seminar", speaker: "IBM Quantum Speaker" },
+        { time: "17:30", title: "Quantum and Qiskit 101 Seminar", speaker: "Bhavna Bose Gupta" },
         { time: "18:30", title: "Live Q&A" },
         { time: "19:00", title: "Quantum Research Spotlight" },
         { time: "19:45", title: "Quiz", highlight: false },
