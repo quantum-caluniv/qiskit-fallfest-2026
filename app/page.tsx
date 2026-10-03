@@ -102,7 +102,7 @@ export default function Home() {
       },
       rows: [
         { time: "17:00", title: "Recap & Day 2 Kick-off" },
-        { time: "17:30", title: "Distinguished Quantum Lecture", speaker: "Prof. (Dr.) Amlan Chakrabarti" },
+        { time: "17:30", title: "Distinguished Quantum Lecture", speaker: "Prof. (Dr.)  Susmita Sur-Kolay" },
         { time: "18:30", title: "Live Q&A" },
         { time: "19:00", title: "Qiskit 201 — Beyond the Basics" },
         { time: "19:30", title: "Hands-on Quantum Computing Session", highlight: false },
@@ -118,7 +118,7 @@ export default function Home() {
       },
       rows: [
         { time: "17:00", title: "Recap & Day 3 Kick-off" },
-        { time: "17:30", title: "Quantum and Qiskit 101 Seminar", speaker: "Bhavna Bose Gupta" },
+        { time: "17:30", title: "Quantum and Qiskit 101 Seminar", speaker: " Prof. Bhavna Bose Gupta" },
         { time: "18:30", title: "Live Q&A" },
         { time: "19:00", title: "Quantum Research Spotlight" },
         { time: "19:45", title: "Quiz", highlight: false },
