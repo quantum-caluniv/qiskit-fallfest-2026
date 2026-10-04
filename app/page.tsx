@@ -86,7 +86,7 @@ export default function Home() {
       },
       rows: [
         { time: "17:00", title: "Welcome & Orientation" },
-        { time: "17:30", title: "Distinguished Quantum Lecture", speaker: "Prof. (Dr.)  Susmita Sur-Kolay" },
+        { time: "17:30", title: "Distinguished Quantum Lecture", speaker: "Prof. (Dr.) Amlan Chakrabarti" },
         { time: "18:30", title: "Live Q&A" },
         { time: "19:00", title: "Qiskit 101 — From Qubit to Circuit" },
         { time: "19:30", title: "Hands-on Qiskit Lab", highlight: false },
