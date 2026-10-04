@@ -128,7 +128,7 @@ export default function Home() {
   ];
 
   // Replace this with the final Google Drive folder/link for attendees.
-  const attendeeResourcesUrl = "https://drive.google.com/";
+  const attendeeResourcesUrl = "https://drive.google.com/drive/folders/11HwDd8X5ziRijgeav7MhtL1bTGj7swVN?usp=sharing";
 
   // Registration link is already stored here, but remains disabled until you switch this to true.
   const registrationUrl = "https://forms.gle/Vbzt1fZYLnEgC3KF8";
